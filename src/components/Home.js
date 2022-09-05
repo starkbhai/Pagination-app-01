@@ -16,10 +16,10 @@ const Home = () => {
        })
     },[]);
 
-    const[maxNum,sMaxNum]=useState(5);
-    const[minNum,sMinNum]=useState(1);
+    const[maxNum,sMaxNum]=useState(4);
+    const[minNum,sMinNum]=useState(-2);
     
-
+ 
     
     const pageBtn=(pageVal)=>{
       
@@ -36,14 +36,14 @@ const Home = () => {
             const totalPages = Math.ceil(length/6);
 
 
-    //  console.log(fArray)
-    //  console.log(length)
+     console.log(fArray)
+    //  console.log(array)
 
 
 
-   const printData = array && fArray.map((v)=>{
+   const printData = fArray && fArray.map((v)=>{
          return (
-            <div className=' leading-6 border border-yellow-500 w-[400px] pl-5 pr-5 pt-3'>
+            <div key={v.id} className=' leading-6 border border-yellow-500 w-[400px] pl-5 pr-5 pt-3'>
                     <h2 className='font-extrabold text-white bg-red-800 text-xl text-center'>{v.id}</h2>
                     <h1 className='font-mono font-semibold text-blue-500'>{v.name.slice(0,10)}</h1>
                     
